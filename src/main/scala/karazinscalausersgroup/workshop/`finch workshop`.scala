@@ -31,7 +31,7 @@ import com.twitter.finagle.stats.Counter
   *
   *   $ http POST :8080/add/ticket uuid=e5c06c7e-a2b5-45f8-a5e7-90de7ede1f76 reporter="Descartes" assignee="Newton" description="Create cool Finch workshop"
   *
-  *   $ http POST :8080/update/ticket uuid=e5c06c7e-a2b5-45f8-a5e7-90de7ede1f76 reporter="Descartes" assignee="Leibniz" description="Create cool Finch workshop"
+  *   $ http POST :8080/update/ticket/uuid reporter="Descartes" assignee="Leibniz" description="Create cool Finch workshop"
   * }}}
   */
 object `finch workshop` extends App {
