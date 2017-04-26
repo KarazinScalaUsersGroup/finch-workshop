@@ -29,9 +29,9 @@ import com.twitter.finagle.stats.Counter
   * {{{
   *   $ http GET :8080/get/ticket/uuid
   *
-  *   $ http POST :8080/add/ticket uuid=e5c06c7e-a2b5-45f8-a5e7-90de7ede1f76 reporter="Descartes" assignee="Newton" description="Create cool Finch workshop"
+  *   $ http POST :8080/add/ticket reporter="Descartes" assignee="Newton" description="Create cool Finch workshop"
   *
-  *   $ http POST :8080/update/ticket uuid=e5c06c7e-a2b5-45f8-a5e7-90de7ede1f76 reporter="Descartes" assignee="Leibniz" description="Create cool Finch workshop"
+  *   $ http POST :8080/update/ticket/uuid reporter="Descartes" assignee="Leibniz" description="Create cool Finch workshop"
   * }}}
   */
 object `finch workshop` extends App {
@@ -47,7 +47,7 @@ object `finch workshop` extends App {
   val added: Endpoint[Ticket] = jsonBody[UUID => Ticket].map(_(UUID.randomUUID()))
 
   val `add ticket`: Endpoint[Ticket] =
-    put("add" :: "ticket" :: added) { ticket: Ticket =>
+    post("add" :: "ticket" :: added) { ticket: Ticket =>
       storage put ticket
 
       Ok(ticket)
