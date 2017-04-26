@@ -9,7 +9,6 @@ import io.circe.generic.auto._
 import io.finch._
 import io.finch.circe._
 import model.Ticket
-import storage._
 
 import com.twitter.server.TwitterServer
 import com.twitter.finagle.stats.Counter
