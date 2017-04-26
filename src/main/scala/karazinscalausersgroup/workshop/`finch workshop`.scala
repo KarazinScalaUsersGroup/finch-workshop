@@ -16,7 +16,7 @@ import com.twitter.finagle.stats.Counter
 /**
   * A simple CRUD Finch application
   *
-  * Phase 7. Update with patch
+  * Phase 6. Update with patch
   *
   * Use the following sbt command to run the application.
   *
