@@ -16,7 +16,7 @@ import com.twitter.finagle.stats.Counter
 /**
   * A simple CRUD Finch application
   *
-  * Phase 8. Create with uuid generation
+  * Phase 7. Create with uuid generation
   *
   * Use the following sbt command to run the application.
   *
