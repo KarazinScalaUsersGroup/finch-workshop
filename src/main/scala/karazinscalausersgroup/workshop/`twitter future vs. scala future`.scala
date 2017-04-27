@@ -17,7 +17,7 @@ import com.twitter.bijection.twitter_util.UtilBijections._
 
 
 /**
-  * A simple twitter future to scala future and vice versa custom converter
+  * A simple Twitter Future to Scala Future and vice versa custom converter
   *
   *
   * {{{
